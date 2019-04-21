@@ -1,0 +1,11 @@
+n=2016
+if n%4==0:
+    if n%100==0 and n%400!=0:
+        print('The given integer doesnot correspond to a leap year')
+    elif n%100==0 and n%400==0:
+        print('The given integer does correspond to a leap year' )
+    else:
+        print('The given integer does correspond to a leap year')
+
+else:
+    print('The given integer doesnot correspond to a leap year')
