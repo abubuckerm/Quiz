@@ -1,0 +1,20 @@
+1.
+ wget 'http://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/chapter-11-regex--structure.pdb' -O structure.pdb
+ sed -n 's/Beisel/Weisel/p' structure.pdb
+2.
+ sed -i '1,3d' structure.pdb
+3.
+ sed -n '5,10p' structure.pdb
+4.
+ sed -n /'\bMET\b/d; p' structure.pdb
+5.
+sed -n '/HELIX.*\bILE\b/p' structure.pdb 
+6.
+ sed '/^HELIX/a\
+> ***
+> ' structure.pdb
+7.
+ sed 's/SEQRES/SEQ/g' structure.pdb
+8. 
+scp -i 45549125.pem jabberwocky.txt ubuntu@ec2-13-236-71-11.ap-southeast-2.compute.amazonaws.com:
+sed -i '/^$/d' jabberwocky.txt
